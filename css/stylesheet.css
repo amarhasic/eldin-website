@@ -342,6 +342,7 @@ nav::after {
     line-height: 1.4;
 }
 
+
 .about {
     /* Remove any default background behavior */
     background: none;
@@ -658,6 +659,33 @@ nav::after {
 .copyright .brand {
     color: #00FF7F;
     text-decoration: none;
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.language-switcher button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Quatro SemiBold', sans-serif;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+    background-color: #00FF7F;
+    color: #18864B;
 }
 
 /* Responsive adjustments */
