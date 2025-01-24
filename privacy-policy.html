@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Eldin Rizvanovic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Quatro SemiBold';
+            src: url('../assets/fonts/QuatroSemiBold.otf') format('opentype');
+        }
+
+        body {
+            background-color: #18864B;
+            color: white;
+            font-family: 'Quatro SemiBold', sans-serif;
+            line-height: 1.6;
+        }
+
+        .privacy-header {
+            background-image: url('/assets/background.svg');
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .privacy-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(24, 134, 75, 0.95);
+            z-index: 1;
+        }
+
+        .privacy-header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .privacy-header p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+        }
+
+        .privacy-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .privacy-section {
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .privacy-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .privacy-section h2 {
+            color: #00FF7F;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #00FF7F;
+        }
+
+        .privacy-section p, .privacy-section ul {
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ul {
+            list-style-position: inside;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem;
+            background: rgba(0, 255, 127, 0.1);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 15px;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 127, 0.1));
+            z-index: -1;
+        }
+
+        .contact-section h2 {
+            color: #00FF7F;
+            margin-bottom: 1.5rem;
+        }
+
+        .email-link {
+            color: #00FF7F;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #00FF7F;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background: #00FF7F;
+            color: #18864B;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-section {
+                padding: 1.5rem;
+            }
+
+            .contact-section {
+                padding: 2rem 1rem;
+            }
+
+            .privacy-content {
+                padding: 2rem 1rem;
+            }
+        }
+
+        .back-to-home {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 100;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(0, 255, 127, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            background: rgba(0, 255, 127, 0.3);
+            transform: translateX(5px);
+        }
+
+        .back-to-home svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 576px) {
+            .back-to-home {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-to-home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/>
+            <path d="M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Home
+    </a>
+
+    <header class="privacy-header">
+        <h1>Privacy Policy</h1>
+        <p>Understanding how your data is handled when visiting Eldin Rizvanovic's official website</p>
+    </header>
+
+    <main class="privacy-content">
+        <div class="privacy-section">
+            <h2>Overview</h2>
+            <p>Our website itself does not collect or process any personal data from its visitors. Any data collection is limited to:</p>
+            <ul>
+                <li>Essential hosting services provided by Netlify</li>
+                <li>Video player functionality provided by Vimeo</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Data Collection and Processing</h2>
+            <h3>Website Hosting</h3>
+            <p>Our website is hosted on Netlify. Netlify may collect certain technical information required for website delivery and maintenance. For details about Netlify's data practices, please refer to Netlify's Privacy Policy.</p>
+            
+            <h3>Video Content</h3>
+            <p>Our website embeds videos through Vimeo's video player. When you play a video:</p>
+            <ul>
+                <li>Vimeo may collect technical information about your browser and device</li>
+                <li>Vimeo may use cookies for player functionality</li>
+                <li>Vimeo may collect viewing statistics and playback information</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Your Privacy Rights Under GDPR</h2>
+            <p>Even though we minimize data collection, you are entitled to certain rights under the General Data Protection Regulation (GDPR):</p>
+            <ul>
+                <li>The right to access information about your data</li>
+                <li>The right to request data correction or deletion</li>
+                <li>The right to restrict or object to data processing</li>
+                <li>The right to data portability</li>
+                <li>The right to withdraw consent</li>
+                <li>The right to file a complaint with a supervisory authority</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Data Security</h2>
+            <p>We prioritize the security of any information that might be collected through third-party services. Our website uses HTTPS encryption to protect data transmission.</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>Contact Information</h2>
+            <p>If you have questions about this privacy policy or your privacy rights, please contact us at:</p>
+            <a href="mailto:hello@eldinrizvanovic.com" class="email-link">hello@eldinrizvanovic.com</a>
+        </div>
+
+        <p class="last-updated">Last updated: January 21, 2025</p>
+    </main>
+</body>
+</html>

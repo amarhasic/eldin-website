@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <defs>
+        <!-- Gradient definitions -->
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a924f;stop-opacity:0.7">
+                <animate attributeName="stop-opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#18864B;stop-opacity:0.3">
+                <animate attributeName="stop-opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        
+        <!-- Floating circle filter -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+        </filter>
+    </defs>
+
+    <!-- Background with gradient -->
+    <rect width="100%" height="100%" fill="url(#grad1)"/>
+
+    <!-- Animated floating circles -->
+    <g fill="#00FF7F" filter="url(#glow)">
+        <!-- Large circles -->
+        <circle cx="200" cy="200" r="8">
+            <animate attributeName="cy" values="200;180;200" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="800" cy="300" r="6">
+            <animate attributeName="cy" values="300;280;300" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="400" cy="700" r="10">
+            <animate attributeName="cy" values="700;680;700" dur="5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite" />
+        </circle>
+
+        <!-- Small particles -->
+        <g opacity="0.3">
+            <circle cx="300" cy="400" r="3">
+                <animate attributeName="cy" values="400;390;400" dur="2s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="600" cy="200" r="2">
+                <animate attributeName="cy" values="200;190;200" dur="2.5s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="700" cy="600" r="4">
+                <animate attributeName="cy" values="600;590;600" dur="3.5s" repeatCount="indefinite" />
+            </circle>
+        </g>
+    </g>
+
+    <!-- Animated lines -->
+    <g stroke="#ffffff" stroke-opacity="0.1">
+        <line x1="200" y1="0" x2="200" y2="1000">
+            <animate attributeName="stroke-opacity" values="0.1;0.2;0.1" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line x1="400" y1="0" x2="400" y2="1000">
+            <animate attributeName="stroke-opacity" values="0.1;0.2;0.1" dur="4s" repeatCount="indefinite" />
+        </line>
+        <line x1="600" y1="0" x2="600" y2="1000">
+            <animate attributeName="stroke-opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite" />
+        </line>
+        <line x1="800" y1="0" x2="800" y2="1000">
+            <animate attributeName="stroke-opacity" values="0.1;0.2;0.1" dur="6s" repeatCount="indefinite" />
+        </line>
+    </g>
+
+    <!-- Pulsing dots pattern -->
+    <g fill="#ffffff" fill-opacity="0.2">
+        <circle cx="100" cy="100" r="2">
+            <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="300" cy="300" r="2">
+            <animate attributeName="r" values="2;3;2" dur="2.5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="500" cy="500" r="2">
+            <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="700" cy="700" r="2">
+            <animate attributeName="r" values="2;3;2" dur="3.5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="900" cy="900" r="2">
+            <animate attributeName="r" values="2;3;2" dur="4s" repeatCount="indefinite" />
+        </circle>
+    </g>
+</svg>

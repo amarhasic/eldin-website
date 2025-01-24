@@ -3,34 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placeholder Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-        }
-        .container h1 {
-            font-size: 2rem;
-        }
-        .container p {
-            font-size: 1rem;
-            color: #555;
-        }
-    </style>
+    <title>Eldin Rizvanovic | Official Page</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Placeholder Page</h1>
-        <p>This is a placeholder for future content. Stay tuned!</p>
-    </div>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="animated-background"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>I AM</h2>
+                <h1>Eldin<br>Rizvanovic</h1>
+                <img src="assets/signature.png" alt="Signature" class="signature">
+            </div>
+            <div class="hero-image">
+                <img src="assets/eldin.png" alt="Eldin Rizvanovic">
+            </div>
+        </div>
+        
+        <div class="info-boxes">
+            <div class="info-box pink">
+                <img src="assets/icon1.png" alt="Location Icon" class="icon">
+                <h3>Place of Birth</h3>
+                <p>Wien, Austria</p>
+              </div>
+            <div class="info-box purple">
+                <img src="assets/icon2.png" alt="Location Icon" class="icon">
+                <h3>Date of Birth</h3>
+                <p>June 2008</p>
+            </div>
+            <div class="info-box magenta">
+                <img src="assets/icon3.png" alt="Location Icon" class="icon">
+                <h3>Weight</h3>
+                <p>80kg</p>
+            </div>
+            <div class="info-box orange">
+                <img src="assets/icon4.png" alt="Location Icon" class="icon">
+                <h3>Height</h3>
+                <p>195cm</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-header">
+                <h2><span class="green">About</span> Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="main-text">
+                        Hi, I’m Eldin Rizvanovic—a goalkeeper driven by teamwork and dedication. 
+                        My focus lies in clear communication, reliable shot-stopping, and precise distribution. Whether I’m saving a last-minute penalty or setting up a quick counterattack, 
+                        I treat every moment on the pitch as an opportunity to help my teammates excel. 
+                        For me, football is about unity, resilience, and constantly pushing to improve. I’m always ready for the next challenge.
+                    </p>
+                    
+                    <div class="info-section">
+                        <div class="info-item">
+                            <div class="icon-wrapper">
+                                <img src="assets/biography-icon.png" alt="Biography Icon" class="info-icon">
+                            </div>
+                            <div class="info-content">
+                                <h3>Biography</h3>
+                                <p>I grew up playing on local pitches in Austria, where I discovered my passion for goalkeeping early on. Over the years, 
+                                    I’ve honed my reflexes, worked on my positioning, and learned how crucial it is to guide defenders through constant, calm communication. 
+                                    I’ve had the privilege to represent several clubs, each one helping me become a more resilient, disciplined player. 
+                                    Today, I remain dedicated to evolving as a goalkeeper and contributing to the proud tradition of Austrian football.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="icon-wrapper">
+                                <img src="assets/stats-icon.png" alt="Stats Icon" class="info-icon">
+                            </div>
+                            <div class="info-content">
+                                <h3>Stats</h3>
+                                <p>• Appearances: 262 <br>
+                                    • Goals: 6<br>
+                                    • Yellow Cards: 0<br>
+                                    • Red Cards: 0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="icon-wrapper">
+                                <img src="assets/history-icon.png" alt="Clubs Icon" class="info-icon">
+                            </div>
+                            <div class="info-content">
+                                <h3>Clubs</h3>
+                                <p>• Wiener Sport-Club (current)
+                                    <br>• SC Red Star Penzing<br>• SC Team Wiener Linien<br>• SV Wienerberg 1921<br>• Young Style SC Wienerberg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="assets/1.png" alt="Player Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="video-section" id="showcase">
+        <div class="video-container">
+            <h2><span class="green">Video</span> Highlights</h2>
+            <div class="video-wrapper">
+                <div style="padding:56.6% 0 0 0;position:relative;">
+                    <iframe 
+                        src="https://player.vimeo.com/video/1047826710?h=df13244705&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Eldin Highlights">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <h2><span class="green">Photo</span> Gallery</h2>
+            <div class="photo-grid">
+                <div class="photo-item large">
+                    <img src="assets/gallery/photo1.png" alt="Gallery Image 1">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/gallery/photo2.png" alt="Gallery Image 2">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/gallery/photo3.png" alt="Gallery Image 3">
+                </div>
+                <div class="photo-item vertical">
+                    <img src="assets/gallery/photo4.png" alt="Gallery Image 4">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/gallery/photo5.png" alt="Gallery Image 5">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/gallery/photo6.png" alt="Gallery Image 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h2>Get in touch</h2>
+            
+            <div class="social-links">
+                <a href="mailto:hello@eldinrizvanovic.com" class="social-link email" aria-label="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>hello@eldinrizvanovic.com</span>
+                </a>
+                
+                <a href="https://www.instagram.com/eldin.rzv.01/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <span>@eldin.rzv.01</span>
+                </a>
+            </div>
+    
+            <div class="legal-links">
+                <a href="/privacy-policy">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C12 22 20 18 20 12V4L12 2L4 4V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Privacy Policy
+                </a>
+                <a href="/cookie-policy">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="8" cy="10" r="2" fill="currentColor"/>
+                        <circle cx="15" cy="13" r="2" fill="currentColor"/>
+                        <circle cx="9" cy="16" r="2" fill="currentColor"/>
+                    </svg>
+                    Cookie Policy
+                </a>
+                <a href="/imprint">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Imprint
+                </a>
+            </div>
+    
+            <div class="copyright">
+                <p>© All Rights Reserved By <a href="/" class="brand">Eldin Rizvanovic</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

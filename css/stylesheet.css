@@ -1,0 +1,679 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Quatro SemiBold';
+    src: url('../assets/fonts/QuatroSemiBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Futura LT Pro Black';
+    src: url('../assets/fonts/FuturaLTProBlack.otf') format('opentype');
+}
+/* Navigation styles */
+nav {
+    text-decoration: underline;
+    background-image: url('/assets/background.svg'); 
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+}
+
+nav::after {
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-image: url('/assets/background.svg'); 
+    transform: translateX(-50%) skewX(-20deg);
+    transform-origin: top center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add shadow to borders */
+
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #18864B;
+    min-height: 100vh;
+    padding-top: 60px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    text-align: center;
+    padding: 1rem;
+    order: 2;
+}
+
+.hero-text h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: 'Quatro SemiBold', sans-serif;
+    color: #00FF7F;
+}
+
+.hero-text h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-family: 'Quatro SemiBold', sans-serif;
+    text-decoration-skip-ink: auto;
+    text-decoration: underline;
+    line-height: 1.1;
+    margin: 1rem 0;
+}
+
+.signature {
+    width: 90%;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    display: block;
+}
+
+.hero-image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    transform: none;
+    position: relative;
+}
+
+/* Info Boxes */
+.info-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.info-box {
+    background-image: url('/assets/background.svg');
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+}
+
+.info-box h3 {
+    margin: 0.75rem 0;
+    font-style: italic;
+    color: #ffffff;
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 1.1rem;
+}
+
+.info-box p {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 10%;
+    margin-bottom: 0.75rem;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('/assets/background.svg');
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .info-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+    }
+    
+    .hero-text {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: calc(100vh - 280px);
+        padding: 2rem;
+    }
+
+    .hero-text {
+        flex: 1;
+        order: 1;
+        padding-left: 8rem;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex: 1;
+        order: 2;
+        margin-bottom: 0;
+        align-items: flex-end;
+    }
+
+    .hero-image img {
+        max-height: 72vh;
+        margin-right: -5rem;
+        transform: scale(0.9);
+        top: 40px;
+    }
+
+    .info-boxes {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 2rem;
+    }
+
+    .info-box {
+        padding: 2rem;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .info-box p {
+        font-size: 1rem;
+    }
+}
+
+
+.about {
+    background-image: url('/assets/background.svg');
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.about-header {
+    margin-bottom: 4rem;
+}
+
+.about-header h2 {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.about-header .green {
+    color: #00FF7F;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1;
+    color: white;
+}
+
+.main-text {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    filter: invert(91%) sepia(14%) saturate(1103%) hue-rotate(84deg) brightness(101%) contrast(102%);
+}
+
+.info-content h3 {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00FF7F;
+}
+
+.info-content p {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.about {
+    /* Remove any default background behavior */
+    background: none;
+    /* Add a solid background color first */
+    background-color: #18864B;
+    /* Then add the SVG background on top */
+    background-image: url('/assets/background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add an overlay to ensure consistent coloring */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(24, 134, 75, 0.95); /* Same as your hero section color with slight transparency */
+    z-index: 1;
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Ensure content stays above the overlay */
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    right: -20%;
+    bottom: -20%;
+    width: 120%;
+    height: 120%;
+    background-color: #00FF7F;
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .about-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.video-section {
+    background-image: url('/assets/background.svg');
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(24, 134, 75, 0.95);
+    z-index: 1;
+}
+
+.video-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.video-container h2 {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.video-container .green {
+    color: #00FF7F;
+}
+
+.video-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 4rem 1rem;
+    }
+
+    .video-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-image: url('/assets/background.svg');
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(24, 134, 75, 0.95);
+    z-index: 1;
+}
+
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-container h2 {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.gallery-container .green {
+    color: #00FF7F;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    grid-auto-rows: 300px;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.photo-item.vertical {
+    grid-row: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+    
+    .photo-item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .photo-item.vertical {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+    
+    .gallery-container h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+.footer {
+    background-image: url('/assets/footer.png');
+        padding: 4rem 2rem;
+    color: white;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer h2 {
+    font-family: 'Quatro SemiBold', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #00FF7F;
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+.social-link span {
+    font-family: 'Quatro SemiBold', sans-serif;
+}
+
+.legal-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.legal-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Quatro SemiBold', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #00FF7F;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Quatro SemiBold', sans-serif;
+}
+
+.copyright .brand {
+    color: #00FF7F;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer h2 {
+        font-size: 2rem;
+    }
+}
